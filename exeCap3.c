@@ -58,7 +58,25 @@ int main(){
 	//NAO FUNCIONA PRA NEGATIVOS
 	printf("O quadrado desse numero pelo metodo dos impares consecutivos eh: %d", quad);
 //====================================================================================================================================//
-	printf("Exercicio 3.8: Fibonacci");
-	printf("Digite um numero
+	int num, fib;
+	float fim;
+	printf("\nExercicio 3.8: Fibonacci\n");
+	printf("Digite um numero natural maior ou igual a 3:\n");
+	//scanf("%d", num);
+	num = 3;
+	fib = 1;
+	fim = 0.0;
+	
+	for(fib; fib<=num; fib++) {
+		if (fim == 0.0){
+			fim = 1;
+			printf("PORRA %f\n", fim);}
+		if (fim = 1.0){
+			fim = 2.0;
+			printf("cu");}
+		fim += fim;
+		printf("%f\n", fim);}
+	
+	//printf("%d", fim);
 	return 0;
 	}
