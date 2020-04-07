@@ -6,20 +6,49 @@ import random
 import re
 import sys
 
-# Complete the compareTriplets function below.
-def compareTriplets(a, b):
+#entra uma matriz, tira o traço dela e o traço ''inverso'', subtrai e tira o modulo
+#
+
+def diagonalDifference(arr):
+   
+    i = 0
+    j = 0
+    PRIMEIRA_DIAGONAL = []
+    while i < len(arr[0]):
+        PRIMEIRA_DIAGONAL.append(arr[i][j])
+        j += 1
+        i += 1
     
+    i = len(arr) - 1
+    j = 0
+
+    SEGUNDA_DIAGONAL = []
+    while i > -1:
+        SEGUNDA_DIAGONAL.append(arr[i][j])
+        j += 1
+        i -= 1
+    
+    print(PRIMEIRA_DIAGONAL, SEGUNDA_DIAGONAL)
+    dd = sum(PRIMEIRA_DIAGONAL) - sum(SEGUNDA_DIAGONAL)
+    if dd<0:
+        return -dd
+    else:
+        return dd
+
+
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-    a = list(map(int, input().rstrip().split()))
+    n = int(input().strip())
 
-    b = list(map(int, input().rstrip().split()))
+    arr = []
 
-    result = compareTriplets(a, b)
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
 
-    fptr.write(' '.join(map(str, result)))
-    fptr.write('\n')
+    result = diagonalDifference(arr)
+
+    fptr.write(str(result) + '\n')
 
     fptr.close()
