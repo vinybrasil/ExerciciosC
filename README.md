@@ -1,2 +1,2 @@
-# Exercicios em C e em python do HackerRank
+# Exercicios em C e C++ do HackerRank
 Soluções dos exercícios do pdf em anexo. 
